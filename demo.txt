@@ -1,0 +1,93 @@
+project = KAT1 AND (status = "READY FOR QA" OR status = "In QA") AND fixVersion = "AMB 2.6.0"
+
+project = "KIM SW Katimavik"  reporter = "yan.wen@dormakaba.com"   order by created DESC
+
+project = KAT1 AND issuetype = Bug and reporter = "yan.wen@dormakaba.com" 
+
+reporter = currentUser() 
+
+
+Rocky team assignment ticket:
+https://jira.dormakaba.net/browse/KAT1-33319
+
+P: driver:
+\\kims2000\Software\RELEASED PRODUCTS\SOFTWARE\KATIMAVIK
+
+\\kims2000\Software\SQA\
+
+\\10.188.194.254\moose\AMB_Release_2.6.0\
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Filter for JIRA:
+project = KAT1 AND assignee in (currentUser())
+
+reporter = currentUser() order by created DESC
+
+project = KAT1 AND reporter in ("yan.wen@dormakaba.com", "volodymyr.ivanyuk@dormakaba.com", "mei.lin@dormakaba.com") order by created DESC
+
+project = KAT1 AND reporter in ("yan.wen@dormakaba.com", "volodymyr.ivanyuk@dormakaba.com", Mei) order by created DESC
+
+
+Release folder for QA
+\\10.188.194.254\moose\AMB_Release_2.6.0\
+
+Local Ambiance service configuration folder:
+C:\Program Files (x86)\dormakaba\Ambiance Client\Services\ClientServices
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Windows Chinese OS on Local VM and Vsphere:
+
+Windows 2019 Chinese OS:  10.188.205.239
+Win10 enterprise  Chinese Client: 10.188.205.106
+
+Vsphere  YAN's chinese  10.188.205.208 -------------------
+CHN 2019 JAY 10.188.205.239 	administrator/Kimsqa911
+CHN WIN10 JAY 10.188.205.106  admin/Kimsqa911
+ 
+Local VBOX VM:-----------------------------
+
+Windows 2012 Server 192.168.31.225
+Windows 2016 Server 192.168.31.237
+Win10 enterprise 192.168.31.216
+
+win10 enterprise client 192.168.31.186
+
+
+
+------------------------------------------------------------------------------
+C:\Users\zhangy11>net use
+New connections will be remembered.
+
+
+Status       Local     Remote                    Network
+
+-------------------------------------------------------------------------------
+Unavailable  H:        \\KIMS2000\Schedules      Microsoft Windows Network
+Unavailable  I:        \\KIMS2000\Ilco-DWG       Microsoft Windows Network
+Unavailable  L:        \\KIMS2000\SQA            Microsoft Windows Network
+Unavailable  M:        \\KIMS2000\SRD            Microsoft Windows Network
+Unavailable  P:        \\KIMS2000\Software       Microsoft Windows Network
+Unavailable  R:        \\KIMS2000\RefDraw        Microsoft Windows Network
+             S:        \\EgnyteDrive\dormakabaext
+                                                Virtual Network Shares CBFSConnect v2017
+             T:        \\EgnyteDrive\dormakabaint
+                                                Virtual Network Shares CBFSConnect v2017
+Unavailable  V:        \\KIMS2000\Validation     Microsoft Windows Network
+Unavailable  W:        \\KIMS2000\Engineering_Web
+                                                Microsoft Windows Network
+Unavailable  Y:        \\10.188.194.254\moose    Microsoft Windows Network
+Unavailable  Z:        \\KIMS0001\Public_Softwares
+                                                Microsoft Windows Network
+OK                     \\192.168.31.194\e        Microsoft Windows Network
+
+
+
+How to create a Virtual Box Windows OS VM 
+
+Bidirection
+install virtual box additionals.  add optical driver and mount 
+install shared folder
+network use bridge.
+display svga
+USB 3.
+shared folder
+
